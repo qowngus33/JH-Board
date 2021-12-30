@@ -17,6 +17,9 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var passwordConformTextField: UITextField!
         // SignInViewController 에서 넘어올 클로저를 받을 변수
     
+    @IBOutlet weak var emailErrorText: UILabel!
+    @IBOutlet weak var passwordErrorText: UILabel!
+    @IBOutlet weak var passwordCfErrorText: UILabel!
     
     func isUser(id: String) -> Bool {
         for user in userModel.model {
@@ -49,70 +52,52 @@ class SignUpViewController: UIViewController {
         
         if userModel.isValidEmail(id: username)
         {
-            if let removable = self.view.viewWithTag(100) {
-                removable.removeFromSuperview()
-            }
-        }
-        else {
+            emailErrorText.text = ""
+        } else {
             shakeTextField(textField: usernameTextField)
-            /*let emailLabel = UILabel(frame: CGRect(x: 68, y: 350, width: 279,height: 45))
-                emailLabel.text = "이메일 형식을 확인해 주세요"
-                emailLabel.textColor = UIColor.red
-                emailLabel.tag = 100
-                
-                self.view.addSubview(emailLabel)*/
+            emailErrorText.text = "이메일 형식을 확인해주세요"
+            
         } // 이메일 형식 오류
         
-        if userModel.isValidPassword(pwd: password){
-            if let removable = self.view.viewWithTag(101) {
-                removable.removeFromSuperview()
-            }
-        }
-        else{
+        if userModel.isValidPassword(pwd: password)
+        {
+            passwordErrorText.text = ""
+        } else {
             shakeTextField(textField: passwordTextField)
-            /* let passwordLabel = UILabel(frame: CGRect(x: 68, y: 435, width: 279, height: 45))
-            passwordLabel.text = "비밀번호 형식을 확인해 주세요"
-            passwordLabel.textColor = UIColor.red
-            passwordLabel.tag = 101
-            
-            self.view.addSubview(passwordLabel)*/
+            passwordErrorText.text = "비밀번호 형식을 확인해 주세요"
         } // 비밀번호 형식 오류
         
-        if password == conformPwd {
-                   if let removable = self.view.viewWithTag(102) {
-                       removable.removeFromSuperview()
-                   }
-               }
-               else {
-                   shakeTextField(textField: passwordConformTextField)
-                   let passwordConfirmLabel = UILabel(frame: CGRect(x: 70, y: 670, width: 279, height: 45))
-                   passwordConfirmLabel.text = "비밀번호가 다릅니다."
-                   passwordConfirmLabel.textColor = UIColor.red
-                   passwordConfirmLabel.tag = 102
-                   
-                   self.view.addSubview(passwordConfirmLabel)
-               }
+        if password == conformPwd
+        {
+               
+            passwordCfErrorText.text = ""
+        }
+        else
+        {
+            shakeTextField(textField: passwordConformTextField)
+            passwordCfErrorText.text = "비밀번호가 다릅니다."
+        }
                 
-        if userModel.isValidEmail(id: username) && userModel.isValidPassword(pwd: password) && password == conformPwd {
-                let joinFail: Bool = isUser(id: username)
-                if joinFail {
-                    print("이메일 중복")
-                    shakeTextField(textField: usernameTextField)
-                    let joinFailLabel = UILabel(frame: CGRect(x: 68, y: 510, width: 279, height: 45))
-                    joinFailLabel.text = "이미 가입된 이메일입니다."
-                    joinFailLabel.textColor = UIColor.red
-                    joinFailLabel.tag = 103
-                    
-                    self.view.addSubview(joinFailLabel)
-                }
-                else {
-                    print("가입 성공")
-                    if let removable = self.view.viewWithTag(103) {
-                        removable.removeFromSuperview()
-                    }
-                    self.performSegue(withIdentifier: "showMap", sender: self)
-                }
+        if userModel.isValidEmail(id: username) && userModel.isValidPassword(pwd: password) && password == conformPwd
+        {
+            let joinFail: Bool = isUser(id: username)
+            
+            if joinFail
+            {
+                print("이메일 중복")
+                shakeTextField(textField: usernameTextField)
+
+                emailErrorText.text = "이미 가입된 이메일입니다."
+
             }
+            else
+            {
+                print("가입 성공")
+                
+                guard let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "MainView") as? ViewController else { return }
+                        (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(mainVC, animated: false)
+            }
+        }
     }
     
     // Exit Function
