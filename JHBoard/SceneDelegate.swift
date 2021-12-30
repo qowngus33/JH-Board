@@ -9,6 +9,7 @@ import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
+    var isLogged: Bool = false
     var window: UIWindow?
 
 
@@ -17,6 +18,18 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        if isLogged == false {
+            guard let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginView") as? LoginViewController else {return}
+            window?.rootViewController = loginVC
+        } else {
+            guard let mainVC = storyboard.instantiateViewController(withIdentifier: "MainView") as? ViewController else {return}
+            window?.rootViewController = mainVC
+        }
+        
+        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -49,7 +62,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Save changes in the application's managed object context when the application transitions to the background.
         (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
     }
-
+    
+    func changeRootViewController (_ vc: UIViewController, animated: Bool) {
+        guard let window = self.window else { return }
+        window.rootViewController = vc // 전환
+        
+        UIView.transition(with: window, duration: 0.4, options: [.transitionCrossDissolve], animations: nil, completion: nil)
+       
+    }
 
 }
 
