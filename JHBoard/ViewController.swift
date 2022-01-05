@@ -11,7 +11,7 @@ import Foundation
 class ViewController: UIViewController {
     
     
-    lazy var activityIndicator: UIActivityIndicatorView = { // Create an indicator.
+   /* lazy var activityIndicator: UIActivityIndicatorView = { // Create an indicator.
         let activityIndicator = UIActivityIndicatorView()
         activityIndicator.frame = CGRect(x: 0, y: -10, width: 50, height: 50)
         activityIndicator.center = self.view.center
@@ -24,12 +24,12 @@ class ViewController: UIViewController {
         
         return activityIndicator
         
-    }()
+    }()*/
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.addSubview(self.activityIndicator)
+       // self.view.addSubview(self.activityIndicator)
 
         // Do any additional setup after loading the view.
     }

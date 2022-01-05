@@ -13,6 +13,7 @@
 		539C1AEE2785929A009EDAFD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539C1AED2785929A009EDAFD /* MainViewController.swift */; };
 		539C1AF02785976D009EDAFD /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539C1AEF2785976D009EDAFD /* Model.swift */; };
 		539C1AF227859892009EDAFD /* ListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539C1AF127859892009EDAFD /* ListTableViewController.swift */; };
+		539C1AF42785B55B009EDAFD /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539C1AF32785B55A009EDAFD /* UIViewController+Alert.swift */; };
 		53FC8238277A8F7D0055DF30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC8237277A8F7D0055DF30 /* AppDelegate.swift */; };
 		53FC823A277A8F7D0055DF30 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC8239277A8F7D0055DF30 /* SceneDelegate.swift */; };
 		53FC823C277A8F7D0055DF30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC823B277A8F7D0055DF30 /* ViewController.swift */; };
@@ -30,6 +31,7 @@
 		539C1AED2785929A009EDAFD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		539C1AEF2785976D009EDAFD /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		539C1AF127859892009EDAFD /* ListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewController.swift; sourceTree = "<group>"; };
+		539C1AF32785B55A009EDAFD /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		53FC8234277A8F7D0055DF30 /* JHBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JHBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53FC8237277A8F7D0055DF30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53FC8239277A8F7D0055DF30 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				53FC8237277A8F7D0055DF30 /* AppDelegate.swift */,
+				539C1AF32785B55A009EDAFD /* UIViewController+Alert.swift */,
 				539C1AEF2785976D009EDAFD /* Model.swift */,
 				53FC8239277A8F7D0055DF30 /* SceneDelegate.swift */,
 				53FC824E277A9FEA0055DF30 /* userModel.swift */,
@@ -165,6 +168,7 @@
 				539C1AEC27859227009EDAFD /* EditViewController.swift in Sources */,
 				532113DA277D7EF700A6C52C /* LoginViewController.swift in Sources */,
 				532113DC277DB1E600A6C52C /* SignUpViewController.swift in Sources */,
+				539C1AF42785B55B009EDAFD /* UIViewController+Alert.swift in Sources */,
 				53FC823C277A8F7D0055DF30 /* ViewController.swift in Sources */,
 				53FC8238277A8F7D0055DF30 /* AppDelegate.swift in Sources */,
 				539C1AF02785976D009EDAFD /* Model.swift in Sources */,

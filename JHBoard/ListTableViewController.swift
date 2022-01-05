@@ -8,12 +8,20 @@
 import UIKit
 
 class ListTableViewController: UITableViewController {
+    
     let formatter: DateFormatter = {
         let f = DateFormatter()
         f.dateStyle = .long
         f.timeStyle = .short
         return f
     }()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        tableView.reloadData()
+        print(#function)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
