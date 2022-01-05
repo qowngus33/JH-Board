@@ -95,6 +95,22 @@ class SignUpViewController: UIViewController {
             {
                 print("가입 성공")
                 
+                guard let id = usernameTextField.text,
+                      id.count > 0 else {
+                                  alert(message: "아이디를 입력하세요")
+                                  return
+                              }
+                guard let password = usernameTextField.text,
+                      id.count > 0 else {
+                                  alert(message: "비밀번호를 입력하세요")
+                                  return
+                              }
+                
+                
+                let newUser = UserModel()
+                newUser.addUser(name: id, pwd: password)
+
+                
                 guard let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "MainView") as? ViewController else { return }
                         (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(mainVC, animated: false)
             }

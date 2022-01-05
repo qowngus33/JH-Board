@@ -24,8 +24,14 @@ class LoginViewController: UIViewController {
     
     @IBAction func goLogin(_ sender: Any) {
         
-        guard let username = usernameTextField.text, !username.isEmpty else { return } // 예외 처리 : Textfield가 빈문자열이 아니고, nil이 아닐 때
-        guard let password = passwordTextField.text, !password.isEmpty else { return }
+        guard let username = usernameTextField.text, !username.isEmpty else {
+            alert(message: "이메일을 입력해주세요")
+            return
+        } // 예외 처리 : Textfield가 빈문자열이 아니고, nil이 아닐 때
+        guard let password = passwordTextField.text, !password.isEmpty else {
+            alert(message: "비밀번호를 입력해주세요")
+            return
+        }
         
         let loginSuccess: Bool = userModel.findUser(name: username, pwd: password)
         

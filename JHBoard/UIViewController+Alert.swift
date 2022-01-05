@@ -18,4 +18,5 @@ extension UIViewController {
         
         
     }
+    //ex) alert(message: "메모를 입력하세요")
 }
