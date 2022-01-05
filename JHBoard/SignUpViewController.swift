@@ -53,6 +53,7 @@ class SignUpViewController: UIViewController {
         if userModel.isValidEmail(id: username)
         {
             emailErrorText.text = ""
+            
         } else {
             shakeTextField(textField: usernameTextField)
             emailErrorText.text = "이메일 형식을 확인해주세요"

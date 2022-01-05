@@ -6,10 +6,11 @@
 //
 
 import UIKit
+import Foundation
 
 class ViewController: UIViewController {
     
-
+    
     lazy var activityIndicator: UIActivityIndicatorView = { // Create an indicator.
         let activityIndicator = UIActivityIndicatorView()
         activityIndicator.frame = CGRect(x: 0, y: -10, width: 50, height: 50)
@@ -32,6 +33,10 @@ class ViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    
+    
+    
 
 }
 

@@ -51,8 +51,10 @@ class LoginViewController: UIViewController {
             guard let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "MainView") as? ViewController else { return }
                 (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(mainVC, animated: false)
             //guard 조건 else {조건이 false인 경우 수행되는 구문}
-                 
             
+           
+            
+                 
                 }else {
                     UIView.animate(withDuration: 0.1, animations: {
                         self.usernameTextField.frame.origin.x -= 10
