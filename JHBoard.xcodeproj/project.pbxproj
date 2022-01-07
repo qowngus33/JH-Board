@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		532113DA277D7EF700A6C52C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532113D9277D7EF700A6C52C /* LoginViewController.swift */; };
 		532113DC277DB1E600A6C52C /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532113DB277DB1E600A6C52C /* SignUpViewController.swift */; };
+		532AC13C27884DE100226211 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532AC13B27884DE100226211 /* DataManager.swift */; };
 		539C1AEC27859227009EDAFD /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539C1AEB27859227009EDAFD /* EditViewController.swift */; };
 		539C1AEE2785929A009EDAFD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539C1AED2785929A009EDAFD /* MainViewController.swift */; };
 		539C1AF02785976D009EDAFD /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 539C1AEF2785976D009EDAFD /* Model.swift */; };
@@ -28,6 +29,7 @@
 /* Begin PBXFileReference section */
 		532113D9277D7EF700A6C52C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		532113DB277DB1E600A6C52C /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		532AC13B27884DE100226211 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		539C1AEB27859227009EDAFD /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		539C1AED2785929A009EDAFD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		539C1AEF2785976D009EDAFD /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
@@ -57,6 +59,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		532AC13A27884DCC00226211 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				532AC13B27884DE100226211 /* DataManager.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		53FC822B277A8F7D0055DF30 = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +86,7 @@
 		53FC8236277A8F7D0055DF30 /* JHBoard */ = {
 			isa = PBXGroup;
 			children = (
+				532AC13A27884DCC00226211 /* Data */,
 				53FC8237277A8F7D0055DF30 /* AppDelegate.swift */,
 				539C1AF32785B55A009EDAFD /* UIViewController+Alert.swift */,
 				539C1AEF2785976D009EDAFD /* Model.swift */,
@@ -171,6 +182,7 @@
 				539C1AF62785E1E3009EDAFD /* DetailViewController.swift in Sources */,
 				539C1AEC27859227009EDAFD /* EditViewController.swift in Sources */,
 				532113DA277D7EF700A6C52C /* LoginViewController.swift in Sources */,
+				532AC13C27884DE100226211 /* DataManager.swift in Sources */,
 				532113DC277DB1E600A6C52C /* SignUpViewController.swift in Sources */,
 				539C1AF42785B55B009EDAFD /* UIViewController+Alert.swift in Sources */,
 				53FC823C277A8F7D0055DF30 /* ViewController.swift in Sources */,

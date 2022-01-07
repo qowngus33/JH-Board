@@ -19,9 +19,9 @@ class EditViewController: UIViewController {
                   return
               }
         
-        let newMemo = Memo(content: memo)
-        Memo.dummyMemoList.append(newMemo)
-        
+//        let newMemo = Memo(content: memo)
+//        Memo.dummyMemoList.append(newMemo)
+//        
         
                
         dismiss(animated: true, completion: nil)

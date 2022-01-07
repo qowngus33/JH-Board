@@ -19,14 +19,17 @@ class ListTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        tableView.reloadData()
-        print(#function)
+        DataManager.shared.fetchMemo() //배열을 데이터로 채움
+        tableView.reloadData() //배열을 바탕으로 테이블뷰가 reload됨
+        
+//        tableView.reloadData()
+//        print(#function)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let cell = sender as? UITableViewCell, let indexPath = tableView.indexPath(for: cell){
             if let vc = segue.destination as? DetailViewController {
-                vc.memo = Memo.dummyMemoList[indexPath.row]
+                vc.memo = DataManager.shared.memoList[indexPath.row]
             }
         }
             
@@ -51,7 +54,7 @@ class ListTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return Memo.dummyMemoList.count
+        return DataManager.shared.memoList.count
     }
     //이 메소드를 통해 몇 개의 cell을 화면에 표시해야할지 물어봄
 
@@ -61,9 +64,9 @@ class ListTableViewController: UITableViewController {
 
         // Configure the cell...
         
-        let target = Memo.dummyMemoList[indexPath.row]
+        let target = DataManager.shared.memoList[indexPath.row]
         cell.textLabel?.text = target.content
-        cell.detailTextLabel?.text = formatter.string(from: target.insertDate)
+        cell.detailTextLabel?.text = formatter.string(for: target.insertDate)
 
         return cell
     }//개별 셀을 화면 표시해야할때마다 호출됨
