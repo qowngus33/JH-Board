@@ -9,11 +9,9 @@ import Foundation
 import CoreData
 
 class DataManager {
-    
     static let shared = DataManager()
     private init() {
         //Singleton 싱글톤
-    
     }
     
     var mainContext: NSManagedObjectContext {
@@ -38,6 +36,28 @@ class DataManager {
         }
         
     }
+    
+    func addNewMemo (_ memo: String?) {
+        let newMemo = Memo(context: mainContext)
+        newMemo.content = memo
+        newMemo.insertDate = Date()
+        
+        saveContext()
+    }
+    
+    
+    
+    
+    func deleteMemo(_ memo: Memo?) {
+        if let memo = memo {
+            mainContext.delete(memo)
+            saveContext()
+        }
+    }
+    
+    
+    
+    
     
     // MARK: - Core Data stack
 

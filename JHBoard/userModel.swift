@@ -14,6 +14,7 @@ final class UserModel {
     }
     
     var model: [User] = [
+        User(username: "admin", password: "1"),
        User(username: "zico@naver.com", password: "1234"),
        User(username: "dean@naver.com", password: "5678"),
        User(username: "penomeco@naver.com", password: "0101")

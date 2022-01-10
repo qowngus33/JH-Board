@@ -10,8 +10,12 @@ import UIKit
 class EditViewController: UIViewController {
     
     
-    @IBOutlet weak var memoTextView: UITextView!
+   // @IBOutlet weak var memoTextView: UITextView!
     
+    
+   
+    
+    @IBOutlet weak var memoTextView: UITextField!
     @IBAction func saveButton(_ sender: Any) {
         guard let memo = memoTextView.text,
               memo.count > 0 else {
@@ -21,12 +25,10 @@ class EditViewController: UIViewController {
         
 //        let newMemo = Memo(content: memo)
 //        Memo.dummyMemoList.append(newMemo)
-//        
-        
-               
-        dismiss(animated: true, completion: nil)
-        
-       
+        DataManager.shared.addNewMemo(memo)
+    
+        self.navigationController?.popViewController(animated: true)
+
     }
     
     
@@ -36,6 +38,9 @@ class EditViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    
+
     
 
     /*
