@@ -9,6 +9,12 @@ import UIKit
 
 class ListTableViewController: UITableViewController {
     
+    
+    @IBAction func menuButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+        
+    }
+    
     let formatter: DateFormatter = {
         let f = DateFormatter()
         f.dateStyle = .long

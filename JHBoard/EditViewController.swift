@@ -12,9 +12,6 @@ class EditViewController: UIViewController {
     
    // @IBOutlet weak var memoTextView: UITextView!
     
-    
-   
-    
     @IBOutlet weak var memoTextView: UITextField!
     @IBAction func saveButton(_ sender: Any) {
         guard let memo = memoTextView.text,
@@ -31,18 +28,12 @@ class EditViewController: UIViewController {
 
     }
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-    
-
-    
-
     /*
     // MARK: - Navigation
 

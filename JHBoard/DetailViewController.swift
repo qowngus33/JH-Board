@@ -8,11 +8,6 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-    
-    
-    
-    
-    
     @IBAction func deleteFunction(_ sender: Any) {
         
         let alert = UIAlertController(title: "삭제 확인", message: "삭제하시겠습니까?", preferredStyle: .alert)
@@ -35,12 +30,6 @@ class DetailViewController: UIViewController {
         present(alert, animated: true, completion: nil)
         //알림창을 화면에 표시
     }
-    
-    
-    
-    
-    
-    
     
     var memo: Memo?
     
