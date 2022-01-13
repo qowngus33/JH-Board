@@ -24,6 +24,7 @@
 		53FC8244277A8F7F0055DF30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53FC8243277A8F7F0055DF30 /* Assets.xcassets */; };
 		53FC8247277A8F7F0055DF30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53FC8245277A8F7F0055DF30 /* LaunchScreen.storyboard */; };
 		53FC824F277A9FEA0055DF30 /* userModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53FC824E277A9FEA0055DF30 /* userModel.swift */; };
+		D9AEAD514AA76E2645B0E77D /* Pods_JHBoard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE0B2CB29D232B449BB99B37 /* Pods_JHBoard.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,9 @@
 		53FC8246277A8F7F0055DF30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		53FC8248277A8F7F0055DF30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		53FC824E277A9FEA0055DF30 /* userModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userModel.swift; sourceTree = "<group>"; };
+		5A0CEEDF6C79DA1F19BA54CF /* Pods-JHBoard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JHBoard.release.xcconfig"; path = "Target Support Files/Pods-JHBoard/Pods-JHBoard.release.xcconfig"; sourceTree = "<group>"; };
+		BE0B2CB29D232B449BB99B37 /* Pods_JHBoard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JHBoard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7981EF55A83C3AE1E6CC164 /* Pods-JHBoard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JHBoard.debug.xcconfig"; path = "Target Support Files/Pods-JHBoard/Pods-JHBoard.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,12 +57,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D9AEAD514AA76E2645B0E77D /* Pods_JHBoard.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E5504CD35E2B9357EEFE76F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E7981EF55A83C3AE1E6CC164 /* Pods-JHBoard.debug.xcconfig */,
+				5A0CEEDF6C79DA1F19BA54CF /* Pods-JHBoard.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		532AC13A27884DCC00226211 /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -72,6 +87,8 @@
 			children = (
 				53FC8236277A8F7D0055DF30 /* JHBoard */,
 				53FC8235277A8F7D0055DF30 /* Products */,
+				2E5504CD35E2B9357EEFE76F /* Pods */,
+				ABE1EB1E98928093914E39E7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,6 +125,14 @@
 			path = JHBoard;
 			sourceTree = "<group>";
 		};
+		ABE1EB1E98928093914E39E7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BE0B2CB29D232B449BB99B37 /* Pods_JHBoard.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -115,9 +140,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 53FC824B277A8F7F0055DF30 /* Build configuration list for PBXNativeTarget "JHBoard" */;
 			buildPhases = (
+				BD85AFE8ADBE77F40DD3C63D /* [CP] Check Pods Manifest.lock */,
 				53FC8230277A8F7D0055DF30 /* Sources */,
 				53FC8231277A8F7D0055DF30 /* Frameworks */,
 				53FC8232277A8F7D0055DF30 /* Resources */,
+				F2AD039D2C45D4EED35C8FCD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -173,6 +200,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BD85AFE8ADBE77F40DD3C63D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JHBoard-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2AD039D2C45D4EED35C8FCD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JHBoard/Pods-JHBoard-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JHBoard/Pods-JHBoard-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JHBoard/Pods-JHBoard-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		53FC8230277A8F7D0055DF30 /* Sources */ = {
@@ -336,6 +405,7 @@
 		};
 		53FC824C277A8F7F0055DF30 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7981EF55A83C3AE1E6CC164 /* Pods-JHBoard.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -364,6 +434,7 @@
 		};
 		53FC824D277A8F7F0055DF30 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5A0CEEDF6C79DA1F19BA54CF /* Pods-JHBoard.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
